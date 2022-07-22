@@ -14,8 +14,12 @@ import com.revature.ericschmidt.p1.ticketingapi.model.Event;
 public interface EventService {
 
 	@WebMethod
-	public List<Event> findAll();
+	public List<Event> getEvents();
 	@WebMethod
-	public Event save(Event event);
+	public Event addEvent(Event event);
+	@WebMethod
+	public Event getEventById(int EVENTID);
+	@WebMethod
+	public Event delete(int EVENTID);
 	
 }

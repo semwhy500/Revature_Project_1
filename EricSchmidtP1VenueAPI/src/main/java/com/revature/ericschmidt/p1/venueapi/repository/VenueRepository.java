@@ -8,10 +8,14 @@ import org.springframework.stereotype.Repository;
 import com.revature.ericschmidt.p1.venueapi.model.Venue;
 
 @Repository
-public interface VenueRepository extends JpaRepository<Venue, String> {
+public interface VenueRepository extends JpaRepository<Venue, Integer> {
 
 	public List<Venue> findAll();
 
 	public <S extends Venue> S save(Venue venue);
+	
+	public Venue getVenueByVENUEID(int VENUEID);
+	
+	public void delete(Venue venue);
 	
 }

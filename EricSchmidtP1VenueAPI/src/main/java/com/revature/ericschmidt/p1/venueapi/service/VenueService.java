@@ -11,5 +11,7 @@ public interface VenueService {
 
 	public List<Venue> findAll();
 	public Venue save(Venue venue);
+	public Venue getVenueByVENUEID(int VENUEID);
+	public void delete(Venue venue);
 	
 }

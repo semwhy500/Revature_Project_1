@@ -12,5 +12,7 @@ public interface EventRepository extends JpaRepository<Event, Integer>{
 
 	public List<Event> findAll();
 	public <S extends Event> S save(Event event);
+	public void delete(Event event);
+	public Event findById(int EVENTID);
 	
 }
